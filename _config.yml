@@ -1,0 +1,23 @@
+name:                'JSON Canvas'
+title:               'JSON Canvas'
+url:                 'https://jsoncanvas.org'
+description:         'An open file format for infinite canvas data.'
+exclude:             ['.obsidian']
+
+github:              [metadata]
+
+baseurl:             ''
+
+layouts_dir:         .layouts
+includes_dir:        .layouts
+
+use_html_extension:  false
+
+permalink:           pretty
+relative_permalinks: false
+
+defaults:
+  - scope:
+      path: "**/*"
+    values:
+      layout: "default"

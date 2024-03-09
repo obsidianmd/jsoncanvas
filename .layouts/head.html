@@ -1,0 +1,26 @@
+  <head>
+    <meta charset="UTF-8">
+    <title>{{ site.title }} — {{ page.title }}</title>
+
+    <meta name="viewport"            content="width=device-width, initial-scale=1.0">
+    <meta name="description"         content="{% if page.description -%}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else -%}{{ site.description }}{% endif -%}">
+    <meta name="author"              content="{{ site.name }}">
+
+    <link rel="canonical"            href="{{ site.url }}{{ page.url }}">
+    <link rel="icon"                 href="/favicon.ico" sizes="32x32">
+    <link rel="icon"                 href="/icon.svg"    type="image/svg+xml">
+    <link rel="apple-touch-icon"     href="/apple-touch-icon.png">
+    <link rel="stylesheet"           href="/assets/style.css"  type="text/css">
+
+    <meta property="og:site_name"    content="{{ site.title }}">
+    <meta property="og:url"          content="{{ site.url }}{{ page.url }}">
+    <meta property="og:title"        content="{{ site.title }}">
+    <meta property="og:description"  content="{% if page.description -%}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else -%}{{ site.description }}{% endif -%}">
+    <meta property="og:type"         content="{% if page.title -%}article{% else -%}website{% endif -%}">
+    <meta property="og:image"        content="/assets/card.png">
+
+    <meta name="twitter:card"        content="summary_large_image">
+    <meta name="twitter:image"       content="/assets/card.png">
+    <meta name="twitter:title"       content="{{ site.title }}">
+    <meta name="twitter:description" content="{% if page.description -%}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else -%}{{ site.description }}{% endif -%}">
+  </head>

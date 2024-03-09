@@ -1,6 +1,6 @@
 :root {
   --font-content: -apple-system, BlinkMacSystemFont, "Inter", "IBM Plex Sans", Segoe UI, Helvetica, Arial, sans-serif;
-  --font-mono: "IBM Plex Mono", Menlo, SFMono-Regular, Consolas, "Roboto Mono", monospace;
+  --font-mono: ui-monospace, SFMono-Regular, "Cascadia Code", "Roboto Mono", "Source Code Pro", "DejaVu Sans Mono", "Liberation Mono", "Consolas", Menlo, Monaco, monospace;
   --font-small: 0.875em;
   --font-smaller: 0.8em;
   --wrap-wide: 1000px;

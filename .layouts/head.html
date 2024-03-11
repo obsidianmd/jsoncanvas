@@ -17,7 +17,7 @@
     <meta property="og:title"        content="{{ site.title }}">
     <meta property="og:description"  content="{% if page.description -%}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else -%}{{ site.description }}{% endif -%}">
     <meta property="og:type"         content="{% if page.title -%}article{% else -%}website{% endif -%}">
-    <meta property="og:image"        content="/assets/card.png">
+    <meta property="og:image"        content="{{ site.url }}/assets/card.png">
 
     <meta name="twitter:card"        content="summary_large_image">
     <meta name="twitter:image"       content="{{ site.url }}/assets/card.png">

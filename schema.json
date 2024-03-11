@@ -1,0 +1,263 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"default": {
+		"edges": [],
+		"nodes": []
+	},
+	"properties": {
+		"required": true,
+		"edges": {
+			"items": {
+				"$ref": "#/definitions/JSONCanvasEdge"
+			},
+			"type": "array"
+		},
+		"nodes": {
+			"items": {
+				"$ref": "#/definitions/JSONCanvasNode"
+			},
+			"type": "array"
+		}
+	},
+	"definitions": {
+		"JSONCanvasColor": {
+			"anyOf": [
+				{
+					"type": "string"
+				},
+				{
+					"$ref": "#/definitions/JSONCanvasColorPreset"
+				}
+			]
+		},
+		"JSONCanvasColorPreset": {
+			"enum": [1, 2, 3, 4, 5, 6],
+			"type": "number"
+		},
+		"JSONCanvasEdge": {
+			"additionalProperties": false,
+			"properties": {
+				"color": {
+					"$ref": "#/definitions/JSONCanvasColor"
+				},
+				"fromNode": {
+					"type": "string"
+				},
+				"fromSide": {
+					"$ref": "#/definitions/JSONCanvasEdgeSide"
+				},
+				"id": {
+					"type": "string"
+				},
+				"label": {
+					"type": "string"
+				},
+				"toEnd": {
+					"$ref": "#/definitions/JSONCanvasEdgeEnd"
+				},
+				"toNode": {
+					"type": "string"
+				},
+				"toSide": {
+					"$ref": "#/definitions/JSONCanvasEdgeSide"
+				}
+			},
+			"required": ["id", "fromNode", "toNode"],
+			"type": "object"
+		},
+		"JSONCanvasEdgeEnd": {
+			"enum": ["none", "arrow"],
+			"type": "string"
+		},
+		"JSONCanvasEdgeSide": {
+			"enum": ["top", "right", "bottom", "left"],
+			"type": "string"
+		},
+		"JSONCanvasFileNode": {
+			"additionalProperties": false,
+			"properties": {
+				"color": {
+					"$ref": "#/definitions/JSONCanvasColor"
+				},
+				"file": {
+					"type": "string"
+				},
+				"height": {
+					"type": "number"
+				},
+				"id": {
+					"type": "string"
+				},
+				"subpath": {
+					"type": "string"
+				},
+				"type": {
+					"const": "file",
+					"type": "string"
+				},
+				"width": {
+					"type": "number"
+				},
+				"x": {
+					"type": "number"
+				},
+				"y": {
+					"type": "number"
+				}
+			},
+			"required": ["file", "height", "id", "type", "width", "x", "y"],
+			"type": "object"
+		},
+		"JSONCanvasGroupNode": {
+			"additionalProperties": false,
+			"properties": {
+				"background": {
+					"type": "string"
+				},
+				"backgroundStyle": {
+					"enum": ["cover", "ratio", "repeat"],
+					"type": "string"
+				},
+				"color": {
+					"$ref": "#/definitions/JSONCanvasColor"
+				},
+				"height": {
+					"type": "number"
+				},
+				"id": {
+					"type": "string"
+				},
+				"label": {
+					"type": "string"
+				},
+				"type": {
+					"const": "group",
+					"type": "string"
+				},
+				"width": {
+					"type": "number"
+				},
+				"x": {
+					"type": "number"
+				},
+				"y": {
+					"type": "number"
+				}
+			},
+			"required": ["height", "id", "type", "width", "x", "y"],
+			"type": "object"
+		},
+		"JSONCanvasLinkNode": {
+			"additionalProperties": false,
+			"properties": {
+				"color": {
+					"$ref": "#/definitions/JSONCanvasColor"
+				},
+				"height": {
+					"type": "number"
+				},
+				"id": {
+					"type": "string"
+				},
+				"type": {
+					"const": "link",
+					"type": "string"
+				},
+				"url": {
+					"type": "string"
+				},
+				"width": {
+					"type": "number"
+				},
+				"x": {
+					"type": "number"
+				},
+				"y": {
+					"type": "number"
+				}
+			},
+			"required": ["height", "id", "type", "url", "width", "x", "y"],
+			"type": "object"
+		},
+		"JSONCanvasNode": {
+			"anyOf": [
+				{
+					"$ref": "#/definitions/JSONCanvasNodeType"
+				},
+				{
+					"$ref": "#/definitions/JSONCanvasTextNode"
+				},
+				{
+					"$ref": "#/definitions/JSONCanvasFileNode"
+				},
+				{
+					"$ref": "#/definitions/JSONCanvasLinkNode"
+				},
+				{
+					"$ref": "#/definitions/JSONCanvasGroupNode"
+				}
+			]
+		},
+		"JSONCanvasNodeType": {
+			"additionalProperties": false,
+			"properties": {
+				"color": {
+					"$ref": "#/definitions/JSONCanvasColor"
+				},
+				"height": {
+					"type": "number"
+				},
+				"id": {
+					"type": "string"
+				},
+				"type": {
+					"enum": ["text", "file", "link", "group"],
+					"type": "string"
+				},
+				"width": {
+					"type": "number"
+				},
+				"x": {
+					"type": "number"
+				},
+				"y": {
+					"type": "number"
+				}
+			},
+			"required": ["id", "type", "x", "y", "width", "height"],
+			"type": "object"
+		},
+		"JSONCanvasTextNode": {
+			"additionalProperties": false,
+			"properties": {
+				"color": {
+					"$ref": "#/definitions/JSONCanvasColor"
+				},
+				"height": {
+					"type": "number"
+				},
+				"id": {
+					"type": "string"
+				},
+				"text": {
+					"type": "string"
+				},
+				"type": {
+					"const": "text",
+					"type": "string"
+				},
+				"width": {
+					"type": "number"
+				},
+				"x": {
+					"type": "number"
+				},
+				"y": {
+					"type": "number"
+				}
+			},
+			"required": ["height", "id", "text", "type", "width", "x", "y"],
+			"type": "object"
+		}
+	}
+}

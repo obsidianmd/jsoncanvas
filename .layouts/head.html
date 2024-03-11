@@ -7,10 +7,10 @@
     <meta name="author"              content="{{ site.name }}">
 
     <link rel="canonical"            href="{{ site.url }}{{ page.url }}">
-    <link rel="icon"                 href="/favicon.ico" sizes="32x32">
-    <link rel="icon"                 href="/icon.svg"    type="image/svg+xml">
-    <link rel="apple-touch-icon"     href="/apple-touch-icon.png">
-    <link rel="stylesheet"           href="/assets/style.css"  type="text/css">
+    <link rel="icon"                 href="{{ site.url }}/favicon.ico" sizes="32x32">
+    <link rel="icon"                 href="{{ site.url }}/icon.svg"    type="image/svg+xml">
+    <link rel="apple-touch-icon"     href="{{ site.url }}/apple-touch-icon.png">
+    <link rel="stylesheet"           href="{{ site.url }}/assets/style.css"  type="text/css">
 
     <meta property="og:site_name"    content="{{ site.title }}">
     <meta property="og:url"          content="{{ site.url }}{{ page.url }}">
@@ -20,7 +20,7 @@
     <meta property="og:image"        content="/assets/card.png">
 
     <meta name="twitter:card"        content="summary_large_image">
-    <meta name="twitter:image"       content="/assets/card.png">
+    <meta name="twitter:image"       content="{{ site.url }}/assets/card.png">
     <meta name="twitter:title"       content="{{ site.title }}">
     <meta name="twitter:description" content="{% if page.description -%}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else -%}{{ site.description }}{% endif -%}">
   </head>

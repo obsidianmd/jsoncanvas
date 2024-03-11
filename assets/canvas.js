@@ -17,27 +17,6 @@ let lastTouchY = 0;
 let touchStartPanX = 0;
 let touchStartPanY = 0;
 
-let edges = [
-  {
-    id: "edge-logo-nav",
-    fromNode: "logo",
-    fromSide: "right",
-    fromEnd: "none",
-    toNode: "nav",
-    toSide: "left",
-    toEnd: "arrow",
-  },
-  {
-    id: "edge-readme-spec",
-    fromNode: "readme",
-    fromSide: "right",
-    fromEnd: "none",
-    toNode: "spec",
-    toSide: "left",
-    toEnd: "arrow",
-  },
-];
-
 function adjustCanvasToViewport() {
   const nodes = document.querySelectorAll('.node');
   let minX = Infinity, maxX = -Infinity, minY = Infinity, maxY = -Infinity;

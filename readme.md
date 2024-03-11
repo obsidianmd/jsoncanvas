@@ -1,7 +1,3 @@
----
-permalink: index
----
-
 # An open file format for infinite canvas data.
 
 Infinite canvas tools are a way to view and organize information spatially, like a digital whiteboard. Infinite canvases encourage freedom and exploration, and have become a popular interface pattern across many apps.

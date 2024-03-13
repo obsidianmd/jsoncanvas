@@ -1,0 +1,16 @@
+{
+  "name": "jsoncanvas",
+  "description": "Infinite canvas tools are a way to view and organize information spatially, like a digital whiteboard. Infinite canvases encourage freedom and exploration, and have become a popular interface pattern across many apps.",
+  "scripts": {
+    "generate": "tsx ./src/util/generate.ts"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.11.27",
+    "tsx": "^4.7.1",
+    "typescript": "^5.4.2"
+  },
+  "dependencies": {
+    "ts-json-schema-generator": "^1.5.0"
+  }
+}

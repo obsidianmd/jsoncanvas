@@ -227,8 +227,8 @@ body {
   width: 480px;
   height: 480px;
 }
-#nav {
-  padding-right: 36px;
+#nav .node-text-content {
+  padding-right: 72px;
 }
 .page {
   padding: 36px;

@@ -14,6 +14,7 @@
   --color-ui-1: #ddd;
   --color-ui-2: #bbb;
   --color-ui-3: #5E0641;
+  --color-ax-1: #8B0A5F;
 
   --color-selection: rgba(139,10,95,0.15);
 }
@@ -26,6 +27,8 @@
   --color-ui-1: #3F062D;
   --color-ui-2: #68154C;
   --color-ui-3: #b40e7a;
+  --color-ax-1: #8B0A5F;
+
   --color-selection: rgba(139,10,95,0.5);
 }
 

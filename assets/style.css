@@ -227,8 +227,13 @@ body {
 #nav {
   padding-right: 36px;
 }
-.iframe {
+.page {
   padding: 36px;
+  max-width: 48em;
+  margin: 0 auto;
+}
+nav {
+  padding: 24px 36px;
   max-width: 48em;
   margin: 0 auto;
 }
@@ -340,6 +345,12 @@ a {
 small {
   color: var(--color-tx-2);
 }
+hr {
+  margin: 0;
+  border: 0;
+  height: 1px;
+  background-color: var(--color-ui-1);
+}
 iframe {
   -webkit-appearance: none;
   border: none;
@@ -347,6 +358,9 @@ iframe {
   margin: 0;
   vertical-align: bottom;
   border-radius: 8px;
+}
+img {
+  vertical-align: bottom;
 }
 code {
   -webkit-appearance: none;

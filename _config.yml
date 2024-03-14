@@ -25,3 +25,7 @@ defaults:
       path: "spec/**/*.md"
     values:
       layout: "node"
+  - scope:
+      path: "docs/**/*.md"
+    values:
+      layout: "docs"

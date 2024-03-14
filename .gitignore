@@ -4,3 +4,4 @@ _site
 .jekyll-metadata
 .obsidian
 vendor
+.DS_Store

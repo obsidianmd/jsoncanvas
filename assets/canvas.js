@@ -9,9 +9,9 @@ const container = document.getElementById('canvas-nodes');
 let isDragging = false;
 let isSpacePressed = false;
 let isPanning = false;
+
 let startX = 0;
 let startY = 0;
-
 let lastTouchX = 0;
 let lastTouchY = 0;
 let touchStartPanX = 0;
@@ -68,7 +68,7 @@ window.addEventListener('wheel', (e) => {
     }
 }, {passive: false});
 
-
+// Buttons
 document.getElementById('zoom-in').addEventListener('click', function() {
     scale = Math.min(scale + ZOOM_SPEED, maxScale);
     document.body.style.setProperty('--scale', scale);
@@ -235,6 +235,7 @@ function drawEdges() {
   });
 }
 
+// Drag nodes
 document.querySelectorAll('.node .node-name').forEach(nodeName => {
   nodeName.addEventListener('mousedown', function(e) {
     if (isSpacePressed) return;
@@ -272,7 +273,7 @@ window.addEventListener('mouseup', function() {
   }
 });
 
-//Panning
+// Panning
 window.addEventListener('keydown', function(e) {
   if (e.code === 'Space') {
     e.preventDefault();

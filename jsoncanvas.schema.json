@@ -1,0 +1,275 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$ref": "#/definitions/JsonCanvas",
+  "definitions": {
+    "JsonCanvas": {
+      "type": "object",
+      "additionalProperties": {},
+      "properties": {
+        "$schema": {
+          "type": "string"
+        },
+        "nodes": {
+          "$ref": "#/definitions/AnOptionalArrayOfNodes"
+        },
+        "edges": {
+          "$ref": "#/definitions/AnOptionalArrayOfEdges"
+        }
+      },
+      "required": [
+        "$schema"
+      ]
+    },
+    "AnOptionalArrayOfNodes": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ANode"
+      }
+    },
+    "ANode": {
+      "anyOf": [
+        {
+          "$ref": "#/definitions/TextTypeNodesStoreText"
+        },
+        {
+          "$ref": "#/definitions/FileTypeNodesReferenceOtherFilesOrAttachmentsSuchAsImagesVideosEtc"
+        },
+        {
+          "$ref": "#/definitions/LinkTypeNodesReferenceAURL"
+        },
+        {
+          "$ref": "#/definitions/GroupTypeNodesAreUsedAsAVisualContainerForNodesWithinIt"
+        }
+      ],
+      "description": "Nodes are objects within the canvas. Nodes may be text, files, links, or groups."
+    },
+    "TextTypeNodesStoreText": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "$ref": "#/definitions/TheTypeOfATextNode"
+        },
+        "text": {
+          "$ref": "#/definitions/TextInPlainTextWithMarkdownSyntax"
+        }
+      },
+      "required": [
+        "type",
+        "text"
+      ],
+      "additionalProperties": {}
+    },
+    "TheTypeOfATextNode": {
+      "type": "string",
+      "const": "text"
+    },
+    "TextInPlainTextWithMarkdownSyntax": {
+      "type": "string"
+    },
+    "FileTypeNodesReferenceOtherFilesOrAttachmentsSuchAsImagesVideosEtc": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "$ref": "#/definitions/TheTypeOfAFileNode"
+        },
+        "file": {
+          "$ref": "#/definitions/ThePathToTheFileWithinTheSystem"
+        },
+        "subpath": {
+          "$ref": "#/definitions/ASubpathThatMayLinkToAHeadingOrABlockAlwaysStartsWith"
+        }
+      },
+      "required": [
+        "type",
+        "file"
+      ],
+      "additionalProperties": {}
+    },
+    "TheTypeOfAFileNode": {
+      "type": "string",
+      "const": "file"
+    },
+    "ThePathToTheFileWithinTheSystem": {
+      "type": "string"
+    },
+    "ASubpathThatMayLinkToAHeadingOrABlockAlwaysStartsWith": {
+      "type": "string"
+    },
+    "LinkTypeNodesReferenceAURL": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "$ref": "#/definitions/TheTypeOfALinkNode"
+        },
+        "url": {
+          "$ref": "#/definitions/TheURLReferencedByTheLink"
+        }
+      },
+      "required": [
+        "type",
+        "url"
+      ],
+      "additionalProperties": {}
+    },
+    "TheTypeOfALinkNode": {
+      "type": "string",
+      "const": "link"
+    },
+    "TheURLReferencedByTheLink": {
+      "type": "string"
+    },
+    "GroupTypeNodesAreUsedAsAVisualContainerForNodesWithinIt": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "$ref": "#/definitions/TheTypeOfAGroupNode"
+        },
+        "label": {
+          "$ref": "#/definitions/ATextLabelForTheGroup"
+        },
+        "background": {
+          "$ref": "#/definitions/ThePathToTheBackgroundImage"
+        },
+        "backgroundStyle": {
+          "$ref": "#/definitions/TheRenderingStyleOfTheBackgroundImage"
+        }
+      },
+      "required": [
+        "type"
+      ],
+      "additionalProperties": {}
+    },
+    "TheTypeOfAGroupNode": {
+      "type": "string",
+      "const": "text"
+    },
+    "ATextLabelForTheGroup": {
+      "type": "string"
+    },
+    "ThePathToTheBackgroundImage": {
+      "type": "string"
+    },
+    "TheRenderingStyleOfTheBackgroundImage": {
+      "type": "string",
+      "enum": [
+        "cover",
+        "ratio",
+        "repeat"
+      ],
+      "description": "Options are: cover - fills the entire width and height of the node. ratio - maintains the aspect ratio of the background image. repeat - repeats the image as a pattern in both x/y directions."
+    },
+    "AnOptionalArrayOfEdges": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/EdgesAreLinesThatConnectOneNodeToAnother"
+      }
+    },
+    "EdgesAreLinesThatConnectOneNodeToAnother": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "$ref": "#/definitions/AUniqueIdentifierForTheEdge"
+        },
+        "fromNode": {
+          "$ref": "#/definitions/TheNodeIdWhereTheConnectionStarts"
+        },
+        "fromSide": {
+          "$ref": "#/definitions/TheSideWhereThisEdgeStarts"
+        },
+        "fromEnd": {
+          "$ref": "#/definitions/TheShapeOfTheEndpointAtTheEdgeStart"
+        },
+        "toNode": {
+          "$ref": "#/definitions/TheNodeIdWhereTheConnectionEnds"
+        },
+        "toSide": {
+          "$ref": "#/definitions/TheSideWhereThisEdgeEnds"
+        },
+        "toEnd": {
+          "$ref": "#/definitions/TheShapeOfTheEndpointAtTheEdgeEnd"
+        },
+        "color": {
+          "$ref": "#/definitions/TheColorOfTheLine"
+        },
+        "label": {
+          "$ref": "#/definitions/TheTextLabelForTheEdge"
+        }
+      },
+      "required": [
+        "id",
+        "fromNode",
+        "toNode"
+      ],
+      "additionalProperties": {}
+    },
+    "AUniqueIdentifierForTheEdge": {
+      "type": "string"
+    },
+    "TheNodeIdWhereTheConnectionStarts": {
+      "type": "string"
+    },
+    "TheSideWhereThisEdgeStarts": {
+      "type": "string",
+      "enum": [
+        "top",
+        "right",
+        "bottom",
+        "left"
+      ]
+    },
+    "TheShapeOfTheEndpointAtTheEdgeStart": {
+      "type": "string",
+      "enum": [
+        "none",
+        "arrow"
+      ]
+    },
+    "TheNodeIdWhereTheConnectionEnds": {
+      "type": "string"
+    },
+    "TheSideWhereThisEdgeEnds": {
+      "type": "string",
+      "enum": [
+        "top",
+        "right",
+        "bottom",
+        "left"
+      ]
+    },
+    "TheShapeOfTheEndpointAtTheEdgeEnd": {
+      "type": "string",
+      "enum": [
+        "none",
+        "arrow"
+      ]
+    },
+    "TheColorOfTheLine": {
+      "anyOf": [
+        {
+          "$ref": "#/definitions/AColorInHexadecimalFormat"
+        },
+        {
+          "$ref": "#/definitions/APresetColor"
+        }
+      ]
+    },
+    "AColorInHexadecimalFormat": {
+      "type": "string"
+    },
+    "APresetColor": {
+      "type": "number",
+      "enum": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "description": "Six preset colors exist, mapped to the following numbers: 1 red 2 orange 3 yellow 4 green 5 cyan 6 purple"
+    },
+    "TheTextLabelForTheEdge": {
+      "type": "string"
+    }
+  }
+}

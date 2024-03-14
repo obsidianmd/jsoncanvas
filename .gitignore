@@ -5,3 +5,4 @@ _site
 .obsidian
 vendor
 node_modules/
+.DS_Store

@@ -1,0 +1,163 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$ref": "#/definitions/JsonCanvas",
+  "definitions": {
+    "JsonCanvas": {
+      "type": "object",
+      "properties": {
+        "nodes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CanvasNode"
+          }
+        },
+        "edges": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Edge"
+          }
+        }
+      },
+      "additionalProperties": false,
+      "description": "Top-level interface for the JSON Canvas Spec"
+    },
+    "CanvasNode": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "text",
+            "file",
+            "link",
+            "group"
+          ]
+        },
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        },
+        "width": {
+          "type": "number"
+        },
+        "height": {
+          "type": "number"
+        },
+        "color": {
+          "$ref": "#/definitions/CanvasColor"
+        }
+      },
+      "required": [
+        "id",
+        "type",
+        "x",
+        "y",
+        "width",
+        "height"
+      ],
+      "additionalProperties": false,
+      "description": "Base node interface for common attributes"
+    },
+    "CanvasColor": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "number",
+          "const": 1
+        },
+        {
+          "type": "number",
+          "const": 2
+        },
+        {
+          "type": "number",
+          "const": 3
+        },
+        {
+          "type": "number",
+          "const": 4
+        },
+        {
+          "type": "number",
+          "const": 5
+        },
+        {
+          "type": "number",
+          "const": 6
+        }
+      ],
+      "description": "Type for color, either a string for hex values or a number for preset colors"
+    },
+    "Edge": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "fromNode": {
+          "type": "string"
+        },
+        "fromSide": {
+          "type": "string",
+          "enum": [
+            "top",
+            "right",
+            "bottom",
+            "left"
+          ],
+          "description": "Optional side of the node where the edge starts"
+        },
+        "fromEnd": {
+          "type": "string",
+          "enum": [
+            "none",
+            "arrow"
+          ],
+          "description": "Optional style of the edge end"
+        },
+        "toNode": {
+          "type": "string"
+        },
+        "toSide": {
+          "type": "string",
+          "enum": [
+            "top",
+            "right",
+            "bottom",
+            "left"
+          ],
+          "description": "Optional side of the node where the edge ends"
+        },
+        "toEnd": {
+          "type": "string",
+          "enum": [
+            "none",
+            "arrow"
+          ],
+          "description": "Optional style of the edge end"
+        },
+        "color": {
+          "$ref": "#/definitions/CanvasColor"
+        },
+        "label": {
+          "type": "string",
+          "description": "Optional label for the edge"
+        }
+      },
+      "required": [
+        "id",
+        "fromNode",
+        "toNode"
+      ],
+      "additionalProperties": false,
+      "description": "Edge interface for connections between nodes"
+    }
+  }
+}

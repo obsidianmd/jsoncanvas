@@ -170,7 +170,7 @@
 					"type": "number"
 				},
 				"x": {
-					"type": "number"
+					"type": "integer"
 				},
 				"y": {
 					"type": "number"

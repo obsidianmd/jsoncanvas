@@ -4,10 +4,12 @@ JSON Canvas is supported by the following apps and tools. If you would like to a
 
 ## Apps
 
-- [Obsidian](https://obsidian.md/)
-- [Kinopio](https://kinopio.club/)
-- [Flowchart Fun](https://flowchart.fun/)
-- [hi-canvas](https://hi-canvas.marknoteapp.com/)
+| Name                                            | Storage | Import | Export |
+| ----------------------------------------------- | :-----: | :----: | :----: |
+| [Obsidian](https://obsidian.md/)                |    ✓    |   ✓    |   ✓    |
+| [Kinopio](https://kinopio.club/)                |         |   ✓    |   ✓    |
+| [Flowchart Fun](https://flowchart.fun/)         |         |   ✓    |   ✓    |
+| [hi-canvas](https://hi-canvas.marknoteapp.com/) |         |   ✓    |   ✓    |
 
 ## Tools
 

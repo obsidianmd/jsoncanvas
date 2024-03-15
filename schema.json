@@ -167,7 +167,7 @@
 					"type": "string"
 				},
 				"width": {
-					"type": "number"
+					"type": "integer"
 				},
 				"x": {
 					"type": "integer"

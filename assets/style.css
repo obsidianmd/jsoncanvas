@@ -242,7 +242,7 @@ nav .link:hover {
 }
 #readme {
   width: 480px;
-  padding: 36px 36px 48px;
+  padding: 36px;
   z-index: 90;
 }
 #spec {

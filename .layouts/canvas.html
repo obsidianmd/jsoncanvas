@@ -19,9 +19,18 @@
       </svg>
 
       <div id="canvas-nodes">
-        <node id="logo" class="node node-file" data-node-type="file" data-node-file="logo.svg" style="left: 36px; top: 48px;">
-            <div class="node-name">logo.svg</div>
-            <img width="160" height="60" src="/logo.svg" alt="JSON Feed" />
+        <node id="spec" class="node node-link" data-node-type="file" data-node-file="spec/1.0.md" style="left: 600px; top: 140px;">
+          <div class="node-name">spec/1.0</div>
+          <iframe
+            width="100%"
+            height="100%"
+            src="/spec/1.0?hidenav=true">
+          </iframe>
+        </node>
+
+        <node id="readme" class="node node-link" data-node-type="file" data-node-file="readme.md" style="left: 36px; top: 240px;">
+          <div class="node-name">readme</div>
+          {{ content }}
         </node>
 
         <node id="nav" class="node node-text" data-node-type="text" style="left: 336px; top: 36px;">
@@ -35,20 +44,11 @@
             </ul>
           </div>
         </node>
-
-        <node id="readme" class="node node-link" data-node-type="file" data-node-file="readme.md" style="left: 36px; top: 240px;">
-          <div class="node-name">readme</div>
-          {{ content }}
+        
+        <node id="logo" class="node node-file" data-node-type="file" data-node-file="logo.svg" style="left: 36px; top: 48px;">
+            <div class="node-name">logo.svg</div>
+            <img width="160" height="60" src="/logo.svg" alt="JSON Feed" />
         </node>
-
-        <node id="spec" class="node node-link" data-node-type="file" data-node-file="spec/1.0.md" style="left: 600px; top: 140px;">
-          <div class="node-name">spec/1.0</div>
-          <iframe
-            width="100%"
-            height="100%"
-            src="/spec/1.0?hidenav=true">
-          </iframe>
-        </node>        
       </div>
 
       <div id="output" class="theme-dark hidden">
@@ -80,20 +80,20 @@
   <script>
     let edges = [
       {
-        id: "edge-logo-nav",
-        fromNode: "logo",
-        fromSide: "right",
-        fromEnd: "none",
-        toNode: "nav",
-        toSide: "left",
-        toEnd: "arrow",
-      },
-      {
         id: "edge-readme-spec",
         fromNode: "readme",
         fromSide: "right",
         fromEnd: "none",
         toNode: "spec",
+        toSide: "left",
+        toEnd: "arrow",
+      },
+      {
+        id: "edge-logo-nav",
+        fromNode: "logo",
+        fromSide: "right",
+        fromEnd: "none",
+        toNode: "nav",
         toSide: "left",
         toEnd: "arrow",
       },

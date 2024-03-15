@@ -187,7 +187,7 @@
 				},
 				"height": {
 					"description": "The height of the node in pixels",
-					"type": "number"
+					"type": "integer"
 				},
 				"id": {
 					"description": "Unique ID for the node",

@@ -364,6 +364,10 @@ a {
 small {
   color: var(--color-tx-2);
 }
+small a {
+  font-weight: 400;
+  color: var(--color-tx-2);
+}
 hr {
   margin: 0;
   border: 0;

@@ -208,6 +208,25 @@ nav {
   padding: 24px 36px;
   max-width: 48em;
   margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+nav #logo {
+  flex-grow: 1;
+}
+nav .link {
+  color: var(--color-ax-1);
+  text-decoration: none;
+  padding: 0.25em 0.5em;
+  border-radius: 6px;
+}
+nav .link:hover {
+  color: var(--color-bg-1);
+  background-color: var(--color-ax-1);
+}
+.hidenav #navbar {
+ display: none;
 }
 
 /* Specific nodes */

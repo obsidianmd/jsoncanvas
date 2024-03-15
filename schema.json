@@ -169,7 +169,7 @@
 				},
 				"x": {
 					"description": "The x position of the node in pixels",
-					"type": "number"
+					"type": "integer"
 				},
 				"y": {
 					"description": "The y position of the node in pixels",

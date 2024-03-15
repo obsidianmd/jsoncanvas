@@ -233,7 +233,7 @@
 					"$ref": "#/definitions/JSONCanvasColor"
 				},
 				"height": {
-					"type": "number"
+					"type": "integer"
 				},
 				"id": {
 					"type": "string"

@@ -200,7 +200,7 @@ body {
 
 /* Pages */
 .page {
-  padding: 36px;
+  padding: 36px 36px 48px;
   max-width: 48em;
   margin: 0 auto;
 }
@@ -242,7 +242,7 @@ nav .link:hover {
 }
 #readme {
   width: 480px;
-  padding: 36px;
+  padding: 36px 36px 48px;
   z-index: 90;
 }
 #spec {
@@ -473,6 +473,13 @@ button:hover {
 }
 
 @media (max-width: 800px) {
+  nav {
+    padding: 24px;
+    gap: 0;
+  }
+  .page, #readme {
+    padding: 24px 24px 48px 24px;
+  }
   #controls {
     bottom: 0;
     right: 0;

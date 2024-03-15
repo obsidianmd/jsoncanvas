@@ -249,7 +249,7 @@
 					"type": "integer"
 				},
 				"x": {
-					"type": "number"
+					"type": "integer"
 				},
 				"y": {
 					"type": "integer"

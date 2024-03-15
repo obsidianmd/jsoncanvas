@@ -124,7 +124,7 @@
 				},
 				"y": {
 					"description": "The y position of the node in pixels",
-					"type": "number"
+					"type": "integer"
 				}
 			},
 			"required": ["file", "height", "id", "type", "width", "x", "y"],

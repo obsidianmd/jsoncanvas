@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include head.html %}
+  <body id="home" style="--scale: 1; --pan-x: 0px; --pan-y: 0px;">
+
+  <div id="container">
+
+    <div id="canvas-container">
+
+      <svg id="canvas-edges">
+        <defs>
+          <marker id="arrowhead" markerWidth="10" markerHeight="8" 
+          refX="5" refY="4" orient="auto">
+            <polygon points="0 0, 10 4, 0 8"/>
+          </marker>
+        </defs>
+        <g id="edge-paths">
+        </g>
+      </svg>
+
+      <div id="canvas-nodes">
+        <node id="logo" class="node node-file" data-node-type="file" data-node-file="logo.svg" style="left: 36px; top: 48px;">
+            <div class="node-name">logo.svg</div>
+            <img width="160" height="60" src="/logo.svg" alt="JSON Feed" />
+        </node>
+
+        <node id="readme" class="node node-link" data-node-type="file" data-node-file="readme.md" style="left: 36px; top: 240px;">
+          <div class="node-name">404</div>
+          {{ content }}
+        </node>
+
+        <node id="nav" class="node node-text" data-node-type="text" style="left: 336px; top: 36px;">
+          <div class="node-name"></div>
+          <div class="node-text-content">
+            <p>Learn more:</p>
+            <ul>
+              <li><a href="/docs/apps">Apps</a></li>
+              <li><a href="/spec/1.0">Spec</a></li>
+              <li><a href="https://github.com/obsidianmd/jsoncanvas">GitHub</a></li>
+            </ul>
+          </div>
+        </node>
+      </div>
+
+      <div id="output" class="theme-dark hidden">
+        <div class="code-header">
+          <span class="language">JSON&nbsp;Canvas</span>
+          <span class="close-output">×</span>
+        </div>
+        <div id="output-code">
+          <pre><code class="language-json" id="positionsOutput"></code></pre>
+        </div>
+         <div class="code-footer">
+          <button class="button-copy">Copy code</button>
+          <button class="button-download">Download file</button>
+        </div>
+      </div>
+
+      <div id="controls">
+        <div id="zoom-controls">
+          <button id="toggleOutput">Toggle output</button>
+          <button id="zoom-out">Zoom out</button>
+          <button id="zoom-in">Zoom in</button>
+          <button id="zoom-reset">Reset</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    let edges = [
+      {
+        id: "edge-logo-nav",
+        fromNode: "logo",
+        fromSide: "right",
+        fromEnd: "none",
+        toNode: "nav",
+        toSide: "left",
+        toEnd: "arrow",
+      },
+    ];
+  </script>
+
+  <script src="/assets/canvas.js"></script>
+  <script src="/assets/prism.js"></script>
+  </body>
+</html>

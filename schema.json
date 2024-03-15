@@ -253,7 +253,7 @@
 					"type": "number"
 				},
 				"y": {
-					"type": "number"
+					"type": "integer"
 				}
 			},
 			"required": ["height", "id", "text", "type", "width", "x", "y"],

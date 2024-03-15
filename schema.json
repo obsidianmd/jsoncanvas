@@ -116,7 +116,7 @@
 				},
 				"width": {
 					"description": "The width of the node in pixels",
-					"type": "number"
+					"type": "integer"
 				},
 				"x": {
 					"description": "The x position of the node in pixels",

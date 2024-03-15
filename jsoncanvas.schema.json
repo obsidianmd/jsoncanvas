@@ -5,21 +5,19 @@
 		"JsonCanvas": {
 			"type": "object",
 			"properties": {
-				"required": {
-					"type": "boolean",
-					"const": true
-				},
 				"edges": {
 					"type": "array",
 					"items": {
 						"$ref": "#/definitions/JSONCanvasEdge"
-					}
+					},
+					"description": "Edges are lines that connect one node to another"
 				},
 				"nodes": {
 					"type": "array",
 					"items": {
 						"$ref": "#/definitions/JSONCanvasNode"
-					}
+					},
+					"description": "Nodes are objects within the canvas. Nodes may be text, files, links, or groups"
 				}
 			},
 			"additionalProperties": {}
@@ -31,25 +29,43 @@
 					"$ref": "#/definitions/JSONCanvasColor"
 				},
 				"fromNode": {
-					"type": "string"
+					"type": "string",
+					"description": "The ID of the node that the edge starts from"
 				},
 				"fromSide": {
-					"$ref": "#/definitions/JSONCanvasEdgeSide"
+					"type": "string",
+					"enum": [
+						"top",
+						"right",
+						"bottom",
+						"left"
+					],
+					"description": "The side of the node that the edge connects from"
 				},
 				"id": {
-					"type": "string"
+					"type": "string",
+					"description": "The ID for the edge"
 				},
 				"label": {
-					"type": "string"
+					"type": "string",
+					"description": "The text label for the edge"
 				},
 				"toEnd": {
 					"$ref": "#/definitions/JSONCanvasEdgeEnd"
 				},
 				"toNode": {
-					"type": "string"
+					"type": "string",
+					"description": "The ID of the node that the edge ends at"
 				},
 				"toSide": {
-					"$ref": "#/definitions/JSONCanvasEdgeSide"
+					"type": "string",
+					"enum": [
+						"top",
+						"right",
+						"bottom",
+						"left"
+					],
+					"description": "The side of the node that the edge connects to"
 				}
 			},
 			"required": [
@@ -65,41 +81,34 @@
 					"type": "string"
 				},
 				{
-					"$ref": "#/definitions/JSONCanvasColorPreset"
+					"$ref": "#/definitions/APresetColor"
 				}
 			]
 		},
-		"JSONCanvasColorPreset": {
-			"type": "number",
-			"enum": [
-				1,
-				2,
-				3,
-				4,
-				5,
-				6
-			]
-		},
-		"JSONCanvasEdgeSide": {
+		"APresetColor": {
 			"type": "string",
 			"enum": [
-				"top",
-				"right",
-				"bottom",
-				"left"
-			]
+				"1",
+				"2",
+				"3",
+				"4",
+				"5",
+				"6"
+			],
+			"description": "Six preset colors exist, mapped to the following numbers: 1 red 2 orange 3 yellow 4 green 5 cyan 6 purple"
 		},
 		"JSONCanvasEdgeEnd": {
 			"type": "string",
 			"enum": [
 				"none",
 				"arrow"
-			]
+			],
+			"description": "The rendering style of the end of the edge line"
 		},
 		"JSONCanvasNode": {
 			"anyOf": [
 				{
-					"$ref": "#/definitions/JSONCanvasNodeType"
+					"$ref": "#/definitions/JSONCanvasNodeGeneric"
 				},
 				{
 					"$ref": "#/definitions/JSONCanvasTextNode"
@@ -115,17 +124,19 @@
 				}
 			]
 		},
-		"JSONCanvasNodeType": {
+		"JSONCanvasNodeGeneric": {
 			"type": "object",
 			"properties": {
 				"color": {
 					"$ref": "#/definitions/JSONCanvasColor"
 				},
 				"height": {
-					"type": "number"
+					"type": "number",
+					"description": "The height of the node in pixels"
 				},
 				"id": {
-					"type": "string"
+					"type": "string",
+					"description": "Unique ID for the node"
 				},
 				"type": {
 					"type": "string",
@@ -134,16 +145,20 @@
 						"file",
 						"link",
 						"group"
-					]
+					],
+					"description": "The node type"
 				},
 				"width": {
-					"type": "number"
+					"type": "number",
+					"description": "The width of the node in pixels"
 				},
 				"x": {
-					"type": "number"
+					"type": "number",
+					"description": "The x position of the node in pixels"
 				},
 				"y": {
-					"type": "number"
+					"type": "number",
+					"description": "The y position of the node in pixels"
 				}
 			},
 			"required": [
@@ -163,26 +178,33 @@
 					"$ref": "#/definitions/JSONCanvasColor"
 				},
 				"height": {
-					"type": "number"
+					"type": "number",
+					"description": "The height of the node in pixels"
 				},
 				"id": {
-					"type": "string"
+					"type": "string",
+					"description": "Unique ID for the node"
 				},
 				"text": {
-					"type": "string"
+					"type": "string",
+					"description": "Plain text with Markdown syntax"
 				},
 				"type": {
 					"type": "string",
-					"const": "text"
+					"const": "text",
+					"description": "The node type"
 				},
 				"width": {
-					"type": "number"
+					"type": "number",
+					"description": "The width of the node in pixels"
 				},
 				"x": {
-					"type": "number"
+					"type": "number",
+					"description": "The x position of the node in pixels"
 				},
 				"y": {
-					"type": "number"
+					"type": "number",
+					"description": "The y position of the node in pixels"
 				}
 			},
 			"required": [
@@ -203,29 +225,37 @@
 					"$ref": "#/definitions/JSONCanvasColor"
 				},
 				"file": {
-					"type": "string"
+					"type": "string",
+					"description": "The path to the file within the system"
 				},
 				"height": {
-					"type": "number"
+					"type": "number",
+					"description": "The height of the node in pixels"
 				},
 				"id": {
-					"type": "string"
+					"type": "string",
+					"description": "Unique ID for the node"
 				},
 				"subpath": {
-					"type": "string"
+					"type": "string",
+					"description": "The subpath that may link to a heading or a block. Always starts with a #"
 				},
 				"type": {
 					"type": "string",
-					"const": "file"
+					"const": "file",
+					"description": "The node type"
 				},
 				"width": {
-					"type": "number"
+					"type": "number",
+					"description": "The width of the node in pixels"
 				},
 				"x": {
-					"type": "number"
+					"type": "number",
+					"description": "The x position of the node in pixels"
 				},
 				"y": {
-					"type": "number"
+					"type": "number",
+					"description": "The y position of the node in pixels"
 				}
 			},
 			"required": [
@@ -246,26 +276,32 @@
 					"$ref": "#/definitions/JSONCanvasColor"
 				},
 				"height": {
-					"type": "number"
+					"type": "number",
+					"description": "The height of the node in pixels"
 				},
 				"id": {
-					"type": "string"
+					"type": "string",
+					"description": "Unique ID for the node"
 				},
 				"type": {
 					"type": "string",
-					"const": "link"
+					"const": "link",
+					"description": "The node type"
 				},
 				"url": {
 					"type": "string"
 				},
 				"width": {
-					"type": "number"
+					"type": "number",
+					"description": "The width of the node in pixels"
 				},
 				"x": {
-					"type": "number"
+					"type": "number",
+					"description": "The x position of the node in pixels"
 				},
 				"y": {
-					"type": "number"
+					"type": "number",
+					"description": "The y position of the node in pixels"
 				}
 			},
 			"required": [
@@ -283,40 +319,43 @@
 			"type": "object",
 			"properties": {
 				"background": {
-					"type": "string"
+					"type": "string",
+					"description": "The path to the background image"
 				},
 				"backgroundStyle": {
-					"type": "string",
-					"enum": [
-						"cover",
-						"ratio",
-						"repeat"
-					]
+					"$ref": "#/definitions/TheRenderingStyleOfABackgroundImage"
 				},
 				"color": {
 					"$ref": "#/definitions/JSONCanvasColor"
 				},
 				"height": {
-					"type": "number"
+					"type": "number",
+					"description": "The height of the node in pixels"
 				},
 				"id": {
-					"type": "string"
+					"type": "string",
+					"description": "Unique ID for the node"
 				},
 				"label": {
-					"type": "string"
+					"type": "string",
+					"description": "The text label for the group"
 				},
 				"type": {
 					"type": "string",
-					"const": "group"
+					"const": "group",
+					"description": "The node type"
 				},
 				"width": {
-					"type": "number"
+					"type": "number",
+					"description": "The width of the node in pixels"
 				},
 				"x": {
-					"type": "number"
+					"type": "number",
+					"description": "The x position of the node in pixels"
 				},
 				"y": {
-					"type": "number"
+					"type": "number",
+					"description": "The y position of the node in pixels"
 				}
 			},
 			"required": [
@@ -328,6 +367,15 @@
 				"y"
 			],
 			"additionalProperties": false
+		},
+		"TheRenderingStyleOfABackgroundImage": {
+			"type": "string",
+			"enum": [
+				"cover",
+				"ratio",
+				"repeat"
+			],
+			"description": "Options are: cover - fills the entire width and height of the node. ratio - maintains the aspect ratio of the background image. repeat - repeats the image as a pattern in both x/y directions."
 		}
 	}
 }

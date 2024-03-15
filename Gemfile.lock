@@ -295,11 +295,7 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages
-  http_parser.rb (~> 0.6.0)
   jekyll-feed (~> 0.12)
-  tzinfo (>= 1, < 3)
-  tzinfo-data
-  wdm (~> 0.1.1)
   webrick (~> 1.8)
 
 BUNDLED WITH

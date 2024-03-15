@@ -20,8 +20,12 @@ defaults:
   - scope:
       path: "**/*"
     values:
-      layout: "default"
+      layout: "canvas"
   - scope:
       path: "spec/**/*.md"
     values:
-      layout: "node"
+      layout: "docs"
+  - scope:
+      path: "docs/**/*.md"
+    values:
+      layout: "docs"

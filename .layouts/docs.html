@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include head.html %}
+  <body>
+
+    {% include nav.html %}
+
+    <div class="page">
+        {{ content }}
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+          const urlParams = new URLSearchParams(window.location.search);
+          const hideNav = urlParams.get('hidenav');
+          if(hideNav === 'true') {
+              document.body.classList.add('hidenav');
+          }
+      });
+      document.addEventListener('DOMContentLoaded', function() {
+        const links = document.querySelectorAll('a');
+        links.forEach(link => {
+          const url = new URL(link.href);
+          if (url.hostname !== window.location.hostname) {
+            link.target = '_blank';
+            link.rel = 'noopener noreferrer';
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

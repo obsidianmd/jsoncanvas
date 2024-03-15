@@ -473,11 +473,11 @@ button:hover {
 }
 
 @media (max-width: 800px) {
-  nav {
+  body:not(.hidenav) nav {
     padding: 24px;
     gap: 0;
   }
-  .page, #readme {
+  body:not(.hidenav) .page {
     padding: 24px 24px 48px 24px;
   }
   #controls {

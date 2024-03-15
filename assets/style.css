@@ -240,19 +240,22 @@ nav .link:hover {
   top: -1.25em;
   padding-left: 4px;
 }
+#nav {
+  z-index: 90;
+  white-space: nowrap;
+  padding-right: 48px;
+}
 #readme {
   width: 480px;
   padding: 36px;
-  z-index: 90;
+  z-index: 80;
 }
 #spec {
   width: 480px;
   height: 480px;
+  z-index: 70;
 }
-#nav .node-text-content {
-  white-space: nowrap;
-  padding-right: 72px;
-}
+
 
 /* General node styling */
 .node {

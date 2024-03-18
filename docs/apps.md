@@ -20,3 +20,4 @@ JSON Canvas is supported by the following apps and tools. If you would like to a
 
 - [Rust crate](https://crates.io/crates/jsoncanvas)
 - [TypeScript library](https://npmjs.com/package/@trbn/jsoncanvas)
+- [C Single-header Library](https://github.com/ossldossl/jsonCanvas)

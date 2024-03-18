@@ -14,6 +14,7 @@ JSON Canvas is supported by the following apps and tools. If you would like to a
 ## Tools
 
 - [Heptabase Export](https://github.com/link-ding/Heptabase-Export)
+- [JSON Canvas to Mermaid](https://alexwiench.github.io/json-canvas-to-mermaid-demo/)
 
 ## Libraries
 

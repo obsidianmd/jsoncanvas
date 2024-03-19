@@ -331,15 +331,14 @@ nav .link:hover {
 }
 
 /* Page content */
-h1,h2,h3 {
-  margin-top: 0.25em;
-}
 h1 {
   line-height: 1.1;
+  margin-top: 0.25em;
 }
 h2 {
   line-height: 1.2;
   margin-bottom: 0em;
+  margin-top: 1.5em;
 }
 h2 + p {
   margin-top: 0.5em;

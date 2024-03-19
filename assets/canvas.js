@@ -83,7 +83,7 @@ document.getElementById('zoom-reset').addEventListener('click', function() {
   adjustCanvasToViewport();
 });
 
-document.getElementById('toggleOutput').addEventListener('click', function() {
+document.getElementById('toggle-output').addEventListener('click', function() {
   const output = document.getElementById('output');
   output.classList.toggle('hidden');
 });

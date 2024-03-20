@@ -1,6 +1,6 @@
 # Apps and tools
 
-JSON Canvas is supported by the following apps and tools. If you would like to add an app or tool to this list, please submit a pull request on [GitHub](https://github.com/obsidianmd/jsoncanvas).
+JSON Canvas can be used by the following graphical apps, processing tools, and programming libraries. If you would like to add an app, tool or library to this list, please submit a pull request on [GitHub](https://github.com/obsidianmd/jsoncanvas).
 
 ## Apps
 
@@ -13,8 +13,9 @@ JSON Canvas is supported by the following apps and tools. If you would like to a
 
 ## Tools
 
-- [Heptabase Export](https://github.com/link-ding/Heptabase-Export)
-- [JSON Canvas to Mermaid](https://alexwiench.github.io/json-canvas-to-mermaid-demo/)
+- [Heptabase Export](https://github.com/link-ding/Heptabase-Export) (export)
+- [JSON Canvas to Mermaid](https://alexwiench.github.io/json-canvas-to-mermaid-demo/) (export)
+- [pgraphs](https://www.npmjs.org/package/pgraphs) (import and export)
 
 ## Libraries
 

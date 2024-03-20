@@ -15,6 +15,7 @@ JSON Canvas is supported by the following apps and tools. If you would like to a
 
 - [Heptabase Export](https://github.com/link-ding/Heptabase-Export)
 - [JSON Canvas to Mermaid](https://alexwiench.github.io/json-canvas-to-mermaid-demo/)
+- [pgraphs](https://www.npmjs.org/package/pgraphs)
 
 ## Libraries
 

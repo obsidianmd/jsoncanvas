@@ -29,3 +29,4 @@ To convert from JSON Canvas to other formats:
 - [Python library](https://pypi.org/project/PyJSONCanvas/)
 - [Rust crate](https://crates.io/crates/jsoncanvas)
 - [TypeScript library](https://npmjs.com/package/@trbn/jsoncanvas)
+- [React JSON Canvas](https://github.com/Digital-Tvilling/react-jsoncanvas)

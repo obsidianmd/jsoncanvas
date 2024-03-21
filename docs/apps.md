@@ -27,6 +27,6 @@ To convert from JSON Canvas to other formats:
 - [C single-header library](https://github.com/ossldossl/jsonCanvas)
 - [Go library](https://github.com/supersonicpineapple/go-jsoncanvas)
 - [Python library](https://pypi.org/project/PyJSONCanvas/)
+- [React](https://github.com/Digital-Tvilling/react-jsoncanvas)
 - [Rust crate](https://crates.io/crates/jsoncanvas)
 - [TypeScript library](https://npmjs.com/package/@trbn/jsoncanvas)
-- [React JSON Canvas](https://github.com/Digital-Tvilling/react-jsoncanvas)

@@ -23,3 +23,4 @@ JSON Canvas is supported by the following apps and tools. If you would like to a
 - [TypeScript library](https://npmjs.com/package/@trbn/jsoncanvas)
 - [C single-header library](https://github.com/ossldossl/jsonCanvas)
 - [Go library](https://github.com/supersonicpineapple/go-jsoncanvas)
+- [Python library](https://pypi.org/project/PyJSONCanvas/)

@@ -30,3 +30,4 @@ To convert from JSON Canvas to other formats:
 - [React](https://github.com/Digital-Tvilling/react-jsoncanvas)
 - [Rust crate](https://crates.io/crates/jsoncanvas)
 - [TypeScript library](https://npmjs.com/package/@trbn/jsoncanvas)
+- [Dart library](https://pub.dev/packages/json_canvas/)

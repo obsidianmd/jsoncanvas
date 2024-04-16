@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>JSON Canvas — An open file format for infinite canvas data.</title>
+
+    <meta name="viewport"            content="width=device-width, initial-scale=1.0">
+    <meta name="description"         content="An open file format for infinite canvas data.Infinite canvas tools are a way to view and organize information spatially, like a digital whiteboard. Infinite ...">
+    <meta name="author"              content="JSON Canvas">
+
+    <link rel="canonical"            href="https://jsoncanvas.org/">
+    <link rel="icon"                 href="https://jsoncanvas.org/favicon.ico" sizes="32x32">
+    <link rel="icon"                 href="https://jsoncanvas.org/assets/icon.svg"    type="image/svg+xml">
+    <link rel="apple-touch-icon"     href="https://jsoncanvas.org/assets/apple-touch-icon.png">
+    <link rel="stylesheet"           href="https://jsoncanvas.org/assets/style.css"  type="text/css">
+
+    <meta property="og:site_name"    content="JSON Canvas">
+    <meta property="og:url"          content="https://jsoncanvas.org/">
+    <meta property="og:title"        content="JSON Canvas">
+    <meta property="og:description"  content="An open file format for infinite canvas data.Infinite canvas tools are a way to view and organize information spatially, like a digital whiteboard. Infinite ...">
+    <meta property="og:type"         content="article">
+    <meta property="og:image"        content="https://jsoncanvas.org/assets/card.png">
+
+    <meta name="twitter:card"        content="summary_large_image">
+    <meta name="twitter:image"       content="https://jsoncanvas.org/assets/card.png">
+    <meta name="twitter:title"       content="JSON Canvas">
+    <meta name="twitter:description" content="An open file format for infinite canvas data.Infinite canvas tools are a way to view and organize information spatially, like a digital whiteboard. Infinite ...">
+  </head>
+  <body id="home" style="--scale: 1; --pan-x: 0px; --pan-y: 0px;">
+
+  <div id="container">
+
+    <div id="canvas-container">
+
+      <svg id="canvas-edges">
+        <defs>
+          <marker id="arrowhead" markerWidth="10" markerHeight="8" 
+          refX="5" refY="4" orient="auto">
+            <polygon points="0 0, 10 4, 0 8"/>
+          </marker>
+        </defs>
+        <g id="edge-paths">
+        </g>
+      </svg>
+
+      <div id="canvas-nodes">
+        <node id="spec" class="node node-link" data-node-type="file" data-node-file="spec/1.0.md" style="left: 600px; top: 140px;">
+          <div class="node-name">spec/1.0</div>
+          <iframe
+            width="100%"
+            height="100%"
+            src="/spec/1.0?hidenav=true">
+          </iframe>
+        </node>
+
+        <node id="readme" class="node node-link" data-node-type="file" data-node-file="readme.md" style="left: 36px; top: 240px;">
+          <div class="node-name">readme</div>
+          <h1 id="an-open-file-format-for-infinite-canvas-data">An open file format for infinite canvas data.</h1>
+
+<p>Infinite canvas tools are a way to view and organize information spatially, like a digital whiteboard. Infinite canvases encourage freedom and exploration, and have become a popular interface pattern across many apps.</p>
+
+<p>The JSON Canvas format was created to provide longevity, readability, interoperability, and extensibility to data created with infinite canvas apps. The format is designed to be easy to parse and give users <a href="https://stephango.com/file-over-app">ownership over their data</a>. JSON Canvas files use the <code class="language-plaintext highlighter-rouge">.canvas</code> extension.</p>
+
+<p>JSON Canvas was originally created for <a href="https://obsidian.md/blog/json-canvas/">Obsidian</a>. JSON Canvas can be implemented freely as an import, export, and storage format for any <a href="/docs/apps/">app or tool</a>. This site, and all the resources associated with JSON Canvas are <a href="https://github.com/obsidianmd/jsoncanvas">open source</a> under the MIT license.</p>
+
+        </node>
+
+        <node id="nav" class="node node-text" data-node-type="text" style="left: 336px; top: 36px;">
+          <div class="node-name"></div>
+          <div class="node-text-content">
+            <p>Learn more:</p>
+            <ul>
+              <li><a href="/docs/apps">Apps</a></li>
+              <li><a href="/spec/1.0">Spec</a></li>
+              <li><a href="https://github.com/obsidianmd/jsoncanvas">GitHub</a></li>
+            </ul>
+          </div>
+        </node>
+        
+        <node id="logo" class="node node-file" data-node-type="file" data-node-file="logo.svg" style="left: 36px; top: 48px;">
+            <div class="node-name">logo.svg</div>
+            <img width="160" height="60" src="/logo.svg" alt="JSON Feed" />
+        </node>
+      </div>
+
+      <div id="output" class="theme-dark hidden">
+        <div class="code-header">
+          <span class="language">JSON&nbsp;Canvas</span>
+          <span class="close-output">×</span>
+        </div>
+        <div id="output-code">
+          <pre><code class="language-json" id="positionsOutput"></code></pre>
+        </div>
+         <div class="code-footer">
+          <button class="button-copy">Copy code</button>
+          <button class="button-download">Download file</button>
+        </div>
+      </div>
+
+      <div id="controls">
+        <div id="zoom-controls">
+          <button id="toggle-output">Toggle output</button>
+          <button id="zoom-out">Zoom out</button>
+          <button id="zoom-in">Zoom in</button>
+          <button id="zoom-reset">Reset</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    let edges = [
+      {
+        id: "edge-readme-spec",
+        fromNode: "readme",
+        fromSide: "right",
+        fromEnd: "none",
+        toNode: "spec",
+        toSide: "left",
+        toEnd: "arrow",
+      },
+      {
+        id: "edge-logo-nav",
+        fromNode: "logo",
+        fromSide: "right",
+        fromEnd: "none",
+        toNode: "nav",
+        toSide: "left",
+        toEnd: "arrow",
+      },
+    ];
+  </script>
+
+  <script src="/assets/canvas.js"></script>
+  <script src="/assets/prism.js"></script>
+  </body>
+</html>

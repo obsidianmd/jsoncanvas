@@ -29,6 +29,6 @@ To convert from JSON Canvas to other formats:
 - [Go library](https://github.com/supersonicpineapple/go-jsoncanvas)
 - [Python library](https://pypi.org/project/PyJSONCanvas/)
 - [React library](https://github.com/Digital-Tvilling/react-jsoncanvas)
+- [Ruby library](https://github.com/ongaeshi/json_canvas)
 - [Rust crate](https://crates.io/crates/jsoncanvas)
 - [TypeScript library](https://npmjs.com/package/@trbn/jsoncanvas)
-- [Ruby library](https://github.com/ongaeshi/json_canvas)

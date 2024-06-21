@@ -20,7 +20,7 @@ To convert from other formats to JSON Canvas:
 To convert from JSON Canvas to other formats:
 
 - [Mermaid](https://alexwiench.github.io/json-canvas-to-mermaid-demo/)
-- [Property Graph Exchange Format](https://www.npmjs.org/package/pgraphs) 
+- [Property Graph Exchange Format](https://www.npmjs.org/package/pgraphs)
 
 ## Libraries
 
@@ -32,3 +32,4 @@ To convert from JSON Canvas to other formats:
 - [Ruby library](https://github.com/ongaeshi/json_canvas)
 - [Rust crate](https://crates.io/crates/jsoncanvas)
 - [TypeScript library](https://npmjs.com/package/@trbn/jsoncanvas)
+- [Vue library](https://github.com/wujieli0207/vue-json-canvas)

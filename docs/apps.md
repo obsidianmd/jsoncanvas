@@ -32,4 +32,5 @@ To convert from JSON Canvas to other formats:
 - [Ruby library](https://github.com/ongaeshi/json_canvas)
 - [Rust crate](https://crates.io/crates/jsoncanvas)
 - [TypeScript library](https://npmjs.com/package/@trbn/jsoncanvas)
+- [Rehype Rendering Library (inline)](https://github.com/lovettbarron/rehype-jsoncanvas)
 - [Vue library](https://github.com/wujieli0207/vue-json-canvas)

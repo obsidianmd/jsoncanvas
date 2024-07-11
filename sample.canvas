@@ -1,4 +1,5 @@
 {
+	"$schema": "./jsoncanvas.schema.json",
 	"nodes":[
 		{"id":"754a8ef995f366bc","type":"group","x":-300,"y":-460,"width":610,"height":200,"label":"JSON Canvas"},
 		{"id":"8132d4d894c80022","type":"file","file":"readme.md","x":-280,"y":-200,"width":570,"height":560,"color":"6"},

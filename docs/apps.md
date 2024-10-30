@@ -10,6 +10,7 @@ JSON Canvas is supported by the following apps and tools. If you would like to a
 | [Kinopio](https://kinopio.club/)                |         |   ✓    |   ✓    |
 | [Flowchart Fun](https://flowchart.fun/)         |         |   ✓    |   ✓    |
 | [hi-canvas](https://hi-canvas.marknoteapp.com/) |         |   ✓    |   ✓    |
+| [OrgPad](https://orgpad.info/)                  |         |   ✓    |   ✓    |
 
 ## Tools
 

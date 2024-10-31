@@ -262,6 +262,7 @@ nav .link:hover {
   -webkit-tap-highlight-color: rgba(0,0,0,0);
   position: absolute;
   display: block;
+  height: fit-content;
 }
 .node.is-active {
   box-shadow:

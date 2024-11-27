@@ -11,6 +11,7 @@ JSON Canvas is supported by the following apps and tools. If you would like to a
 | [Flowchart Fun](https://flowchart.fun/)         |         |   ✓    |   ✓    |
 | [hi-canvas](https://hi-canvas.marknoteapp.com/) |         |   ✓    |   ✓    |
 | [OrgPad](https://orgpad.info/)                  |         |   ✓    |   ✓    |
+| [Grapher](https://grapherx.netlify.app/)        |         |        |   ✓    |
 
 ## Tools
 

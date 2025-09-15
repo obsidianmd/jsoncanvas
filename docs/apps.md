@@ -35,3 +35,4 @@ To convert from JSON Canvas to other formats:
 - [TypeScript library](https://npmjs.com/package/@trbn/jsoncanvas)
 - [Rehype Rendering Library (inline)](https://github.com/lovettbarron/rehype-jsoncanvas)
 - [Vue library](https://github.com/wujieli0207/vue-json-canvas)
+- [TypeScript viewer library](https://github.com/Hesprs/JSON-Canvas-Viewer)

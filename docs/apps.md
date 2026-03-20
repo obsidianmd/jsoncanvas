@@ -12,6 +12,8 @@ JSON Canvas is supported by the following apps and tools. If you would like to a
 | [hi-canvas](https://hi-canvas.marknoteapp.com/) |         |   ✓    |   ✓    |
 | [OrgPad](https://orgpad.info/)                  |         |   ✓    |   ✓    |
 | [Charkoal](https://charkoal.dev/)               |    ✓    |   ✓    |   ✓    |
+| [canvim](https://github.com/pothos-dev/canvim/) |    ✓    |   ✓    |   ✓    |
+
 
 ## Tools
 

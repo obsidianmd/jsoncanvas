@@ -13,6 +13,7 @@ JSON Canvas is supported by the following apps and tools. If you would like to a
 | [OrgPad](https://orgpad.info/)                  |         |   ✓    |   ✓    |
 | [Charkoal](https://charkoal.dev/)               |    ✓    |   ✓    |   ✓    |
 | [Ideaflip](https://ideaflip.com/)               |         |   ✓    |   ✓    |
+| [Noticky Wall](https://wall.noticky.app/)               |         |   ✓    |   ✓    |
 
 ## Tools
 

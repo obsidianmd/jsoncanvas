@@ -13,6 +13,7 @@ JSON Canvas is supported by the following apps and tools. If you would like to a
 | [OrgPad](https://orgpad.info/)                  |         |   ✓    |   ✓    |
 | [Charkoal](https://charkoal.dev/)               |    ✓    |   ✓    |   ✓    |
 | [Ideaflip](https://ideaflip.com/)               |         |   ✓    |   ✓    |
+| [stickies.live](https://stickies.live/)         |         |   ✓    |   ✓    |
 
 ## Tools
 
@@ -37,3 +38,4 @@ To convert from JSON Canvas to other formats:
 - [Rehype Rendering Library (inline)](https://github.com/lovettbarron/rehype-jsoncanvas)
 - [Vue library](https://github.com/wujieli0207/vue-json-canvas)
 - [TypeScript viewer library](https://github.com/Hesprs/JSON-Canvas-Viewer)
+- [React sticky notes (shadcn registry)](https://stickies.live/docs)
